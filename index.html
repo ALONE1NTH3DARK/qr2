@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Визитка Петр Павел</title>
+    <style>
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .card {
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 24px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      }
+      h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+        color: #222;
+      }
+      h2 {
+        margin: 6px 0 18px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #555;
+      }
+      .company {
+        font-size: 17px;
+        margin-bottom: 25px;
+        color: #666;
+      }
+      .info {
+        font-size: 17px;
+        margin-bottom: 14px;
+        color: #333;
+      }
+      .info a {
+        color: #0066ff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .info a:hover {
+        text-decoration: underline;
+      }
+      .slogan {
+        margin-top: 25px;
+        font-style: italic;
+        font-size: 16px;
+        color: #444;
+      }
+      @media (max-width: 480px) {
+        .card {
+          padding: 30px 20px;
+          border-radius: 20px;
+        }
+        h1 {
+          font-size: 28px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Петр Павел</h1>
+      <h2>Директор</h2>
+      <div class="company">ТОО «ОО»</div>
+
+      <div class="info">📞 <strong>Тел:</strong> 78342954798</div>
+      <div class="info">
+        ✉️ <strong>Email:</strong>
+        <a href="mailto:mail@mail.com">mail@mail.com</a>
+      </div>
+      <div class="info">
+        🌐 <strong>Instagram:</strong>
+        <a href="https://instagram.com" target="_blank">instagram.com</a>
+      </div>
+
+      <div class="slogan">Наш слоган</div>
+    </div>
+  </body>
+</html>
