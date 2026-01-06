@@ -1,3 +1,32 @@
+:root {
+  --primary-font: "EuclidCircularA", sans-serif;
+  --alt-font: "EuclidCircularA", sans-serif;
+}
+
+@font-face {
+  font-family: "EuclidCircularA";
+  src: url("fonts/EuclidCircularA-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "EuclidCircularA";
+  src: url("fonts/EuclidCircularA-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "EuclidCircularA";
+  src: url("fonts/EuclidCircularA-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "EuclidCircularA";
+  src: url("fonts/EuclidCircularA-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
 body {
   margin: 0 auto;
   width: 100%;
