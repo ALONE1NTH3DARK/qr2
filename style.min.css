@@ -27,6 +27,22 @@
   font-weight: 700;
 }
 
+a:link {
+  color: #222222; /* обычная ссылка */
+}
+
+a:visited {
+  color: #222222; /* посещённая */
+}
+
+a:hover {
+  color: #444444; /* при наведении */
+}
+
+a:active {
+  color: #222222; /* при клике */
+}
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -382,6 +398,12 @@ video {
 }
 .label p {
   margin: 0;
+}
+.phone {
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 15px;
+  margin-bottom: -15px;
 }
 footer {
   padding: 4rem 1rem 2rem;
