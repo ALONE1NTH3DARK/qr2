@@ -115,7 +115,9 @@
         >
       </div>
       <div id="copyView">
-        <p class="textColor">Copy and send the URL to share my Business Card</p>
+        <p class="textColor">
+          Скопируйте и отправьте URL чтобы поделиться визиткой
+        </p>
         <button id="copyURL" style="background-color: rgb(250, 201, 121)">
           <div class="icon iconColor">
             <svg
@@ -599,9 +601,9 @@
           await navigator.clipboard
             .writeText(window.location.href)
             .then((t) => {
-              (e.innerText = "Copied"),
+              (e.innerText = "Скопировано"),
                 setTimeout(() => {
-                  e.innerText = "Copy URL";
+                  e.innerText = "Скопировать URL";
                 }, 1e3);
             });
         });
