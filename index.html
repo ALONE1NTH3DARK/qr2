@@ -39,6 +39,57 @@
       }
     </style>
     <link rel="stylesheet" href="./style.min.css" />
+    <style>
+      /* Мини-галерея */
+      .mini-gallery {
+        position: relative;
+        max-width: 800px; /* Ширина галереи, меняй под себя */
+        margin: 30px auto; /* Отступы сверху/снизу и по центру */
+        overflow: hidden;
+        border-radius: 1em;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.4s ease;
+        width: 100%;
+      }
+
+      .slides img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        object-fit: cover; /* Красиво обрезает фото */
+      }
+
+      /* Стрелки */
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 30px;
+        padding: 2px 20px 8px 20px;
+        cursor: pointer;
+        border-radius: 1em;
+        user-select: none;
+        transition: background 0.3s;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .prev {
+        left: 15px;
+      }
+      .next {
+        right: 15px;
+      }
+    </style>
   </head>
   <body id="body">
     <div
@@ -513,23 +564,59 @@
           </div>
         </div>
       </div>
-      <div class="featured">
-        <h2 class="section textColor">О фотошколе</h2>
-        <div>
-          <div class="media" style="background-color: rgb(167, 167, 167)">
-            <p class="textC cardColor">
-              Мы рады уже более 10 лет учить людей фотографии и видеть как они
-              становятся успешными профессионалами своего дела. Наша фотошкола
-              не предлагает раздробленное обучение для новичков, как многие
-              фотошколы – по отдельности курсы основы съёмки, основы света,
-              основы обработки и тд. пройдя которые вы потратите намного больше
-              времени и средств. Для новичков у нас курс один, но
-              фундаментальный и очень мощный. Пройдя его для вас не останется
-              тайн в фотографии.
-            </p>
-          </div>
+
+      <!-- Мини-галерея -->
+      <div class="mini-gallery">
+        <div class="slides">
+          <img src="images/photo1.jpg" alt="Фото 1" />
+          <img src="images/photo2.jpg" alt="Фото 2" />
+          <img src="images/photo3.jpg" alt="Фото 3" />
+          <img src="images/photo4.jpg" alt="Фото 4" />
+          <img src="images/photo5.jpg" alt="Фото 5" />
+          <img src="images/photo6.jpg" alt="Фото 6" />
+          <img src="images/photo7.jpg" alt="Фото 7" />
+          <img src="images/photo8.jpg" alt="Фото 8" />
+          <!-- Добавляй сколько угодно фото -->
         </div>
+
+        <div class="prev">&#8249;</div>
+        <!-- Левая стрелка -->
+        <div class="next">&#8250;</div>
+        <!-- Правая стрелка -->
       </div>
+
+      <script>
+        const slides = document.querySelector(".slides");
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        let index = 0;
+        const total = slides.children.length;
+
+        function showSlide(n) {
+          index = (n + total) % total; // Цикличность
+          slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prev.addEventListener("click", () => showSlide(index - 1));
+        next.addEventListener("click", () => showSlide(index + 1));
+
+        // Свайп на мобильных (touch)
+        let touchStartX = 0;
+        slides.addEventListener(
+          "touchstart",
+          (e) => (touchStartX = e.touches[0].clientX)
+        );
+        slides.addEventListener("touchend", (e) => {
+          const touchEndX = e.changedTouches[0].clientX;
+          const diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 50) {
+            // Минимальный свайп
+            if (diff > 0) showSlide(index + 1); // Влево — следующее
+            else showSlide(index - 1); // Вправо — предыдущее
+          }
+        });
+      </script>
+
       <div class="featured">
         <h2 class="section textColor">О фотошколе</h2>
         <div>
@@ -548,6 +635,7 @@
         </div>
       </div>
     </main>
+
     <footer class="" style="background-color: #1f1f1f">
       Заказать
       <a
