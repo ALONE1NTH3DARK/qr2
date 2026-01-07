@@ -406,13 +406,20 @@ video {
   margin-bottom: -15px;
 }
 footer {
-  padding: 4rem 1rem 2rem;
+  padding: 2rem 2rem 2rem;
   font-size: 0.9rem;
   text-align: center;
+  color: #bbb;
 }
-footer a {
+footer a,
+footer a:visited,
+footer a:active,
+footer a:focus {
+  color: #bbb !important;
   text-decoration: underline;
-  color: inherit;
+}
+footer a:hover {
+  color: #fac979 !important;
 }
 
 #topActions {
