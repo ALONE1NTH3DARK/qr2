@@ -421,3 +421,21 @@ footer a:focus {
 footer a:hover {
   color: #fac979 !important;
 }
+
+#topActions {
+  margin-bottom: -56px;
+}
+
+/* Тёмная тема */
+.dark {
+  --icon-color: #ffffff; /* белый или #e0e0e0 для мягкости */
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.icon,
+.social svg,
+.top-icons svg {
+  fill: var(--icon-color);
+  stroke: var(--icon-color); /* если есть обводка */
+}
