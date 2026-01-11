@@ -422,6 +422,57 @@ footer a:hover {
   color: #fac979 !important;
 }
 
+/* Мини-галерея */
+.mini-gallery {
+  position: relative;
+  max-width: 800px; /* Ширина галереи, меняй под себя */
+  margin: 0px 0px 0px 0px auto; /* Отступы сверху/снизу и по центру */
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover; /* Красиво обрезает фото */
+}
+
+/* Стрелки */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  padding: 2px 20px 8px 20px;
+  cursor: pointer;
+  border-radius: 1em;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 15px;
+}
+.next {
+  right: 15px;
+}
+/* Мини-галерея */
+
 /* #topActions {
   margin-bottom: -56px;
 } */
