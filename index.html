@@ -565,61 +565,61 @@
         </div>
       </div>
 
-      <!-- Мини-галерея -->
-      <div class="mini-gallery">
-        <div class="slides">
-          <img src="images/photo1.jpg" alt="Фото 1" />
-          <img src="images/photo2.jpg" alt="Фото 2" />
-          <img src="images/photo3.jpg" alt="Фото 3" />
-          <img src="images/photo4.jpg" alt="Фото 4" />
-          <img src="images/photo5.jpg" alt="Фото 5" />
-          <img src="images/photo6.jpg" alt="Фото 6" />
-          <img src="images/photo7.jpg" alt="Фото 7" />
-          <img src="images/photo8.jpg" alt="Фото 8" />
-          <!-- Добавляй сколько угодно фото -->
-        </div>
-
-        <div class="prev">&#8249;</div>
-        <!-- Левая стрелка -->
-        <div class="next">&#8250;</div>
-        <!-- Правая стрелка -->
-      </div>
-
-      <script>
-        const slides = document.querySelector(".slides");
-        const prev = document.querySelector(".prev");
-        const next = document.querySelector(".next");
-        let index = 0;
-        const total = slides.children.length;
-
-        function showSlide(n) {
-          index = (n + total) % total; // Цикличность
-          slides.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        prev.addEventListener("click", () => showSlide(index - 1));
-        next.addEventListener("click", () => showSlide(index + 1));
-
-        // Свайп на мобильных (touch)
-        let touchStartX = 0;
-        slides.addEventListener(
-          "touchstart",
-          (e) => (touchStartX = e.touches[0].clientX)
-        );
-        slides.addEventListener("touchend", (e) => {
-          const touchEndX = e.changedTouches[0].clientX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 50) {
-            // Минимальный свайп
-            if (diff > 0) showSlide(index + 1); // Влево — следующее
-            else showSlide(index - 1); // Вправо — предыдущее
-          }
-        });
-      </script>
-
       <div class="featured">
         <h2 class="section textColor">О фотошколе</h2>
         <div>
+          <!-- Мини-галерея -->
+          <div class="mini-gallery">
+            <div class="slides">
+              <img src="images/photo1.jpg" alt="Фото 1" />
+              <img src="images/photo2.jpg" alt="Фото 2" />
+              <img src="images/photo3.jpg" alt="Фото 3" />
+              <img src="images/photo4.jpg" alt="Фото 4" />
+              <img src="images/photo5.jpg" alt="Фото 5" />
+              <img src="images/photo6.jpg" alt="Фото 6" />
+              <img src="images/photo7.jpg" alt="Фото 7" />
+              <img src="images/photo8.jpg" alt="Фото 8" />
+              <!-- Добавляй сколько угодно фото -->
+            </div>
+
+            <div class="prev">&#8249;</div>
+            <!-- Левая стрелка -->
+            <div class="next">&#8250;</div>
+            <!-- Правая стрелка -->
+          </div>
+
+          <script>
+            const slides = document.querySelector(".slides");
+            const prev = document.querySelector(".prev");
+            const next = document.querySelector(".next");
+            let index = 0;
+            const total = slides.children.length;
+
+            function showSlide(n) {
+              index = (n + total) % total; // Цикличность
+              slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            prev.addEventListener("click", () => showSlide(index - 1));
+            next.addEventListener("click", () => showSlide(index + 1));
+
+            // Свайп на мобильных (touch)
+            let touchStartX = 0;
+            slides.addEventListener(
+              "touchstart",
+              (e) => (touchStartX = e.touches[0].clientX)
+            );
+            slides.addEventListener("touchend", (e) => {
+              const touchEndX = e.changedTouches[0].clientX;
+              const diff = touchStartX - touchEndX;
+              if (Math.abs(diff) > 50) {
+                // Минимальный свайп
+                if (diff > 0) showSlide(index + 1); // Влево — следующее
+                else showSlide(index - 1); // Вправо — предыдущее
+              }
+            });
+          </script>
+          <!-- Мини-галерея -->
           <div class="media" style="background-color: rgb(237, 237, 237)">
             <p class="textC cardColor">
               Мы рады уже более 10 лет учить людей фотографии и видеть как они
