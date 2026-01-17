@@ -410,10 +410,10 @@ video {
 }
 .prefooter-text {
   color: #222;
-  padding: 1rem 2rem 1rem;
+  padding: 2rem 2rem 2rem;
 }
 prefooter {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   color: #bbb;
   display: flex;
