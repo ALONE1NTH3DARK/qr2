@@ -245,6 +245,10 @@ main {
   font-size: 0.9rem;
   margin: 1rem;
 }
+.tb {
+  font-size: 1.5rem !important;
+  margin: 1rem;
+}
 #cta {
   display: flex;
   align-items: center;
@@ -441,7 +445,6 @@ footer a:visited,
 footer a:active,
 footer a:focus {
   color: #bbb !important;
-  text-decoration: underline;
 }
 footer a:hover {
   color: #fac979 !important;
