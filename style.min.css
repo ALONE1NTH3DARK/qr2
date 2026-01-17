@@ -241,6 +241,10 @@ main {
 .textC {
   margin: 1rem;
 }
+.textSmall {
+  font-size: 0.9rem;
+  margin: 1rem;
+}
 #cta {
   display: flex;
   align-items: center;
@@ -304,7 +308,11 @@ main {
 .media {
   overflow: hidden;
   border-radius: 1rem;
+}
+.mt {
   margin-top: 1rem;
+}
+.mb {
   margin-bottom: 1rem;
 }
 .media img {
