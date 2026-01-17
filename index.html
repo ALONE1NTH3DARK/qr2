@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" style="background-color: #e3e3e3">
   <head>
     <meta charset="UTF-8" />
@@ -628,14 +628,15 @@
             let touchStartX = 0;
             slides.addEventListener(
               "touchstart",
-              (e) => (touchStartX = e.touches[0].clientX)
+              (e) => (touchStartX = e.touches[0].clientX),
             );
             slides.addEventListener("touchend", (e) => {
               const touchEndX = e.changedTouches[0].clientX;
               const diff = touchStartX - touchEndX;
               if (Math.abs(diff) > 50) {
                 // Минимальный свайп
-                if (diff > 0) showSlide(index + 1); // Влево — следующее
+                if (diff > 0)
+                  showSlide(index + 1); // Влево — следующее
                 else showSlide(index - 1); // Вправо — предыдущее
               }
             });
@@ -650,15 +651,20 @@
       </div>
     </main>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.552718077075!2d73.08739709999999!3d49.7944757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42434731354bbccb%3A0xf0a964838d8f77bf!2sFotoshkola%20Valeriya%20Lashkevicha!5e0!3m2!1sen!2skz!4v1768143249803!5m2!1sen!2skz"
-      width="100%"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    <prefooter class="">
+      <p class="prefooter-text" style="background-color: #ededed">
+        Фотошкола находится по адресу:<br />Караганда, Ержанова 10/2, офис 209
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.552718077075!2d73.08739709999999!3d49.7944757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42434731354bbccb%3A0xf0a964838d8f77bf!2sFotoshkola%20Valeriya%20Lashkevicha!5e0!3m2!1sen!2skz!4v1768143249803!5m2!1sen!2skz"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </prefooter>
     <footer class="" style="background-color: #1f1f1f">
       <a
         href="https://wa.me/77070701337"
@@ -694,15 +700,15 @@
       function dN(e) {
         e.style.display = "none";
       }
-      window.addEventListener("load", () => {
-        (document.querySelector("#topActions").style.display = "flex"),
+      (window.addEventListener("load", () => {
+        ((document.querySelector("#topActions").style.display = "flex"),
           (qr.innerHTML = new QRCode({
             content: window.location.href,
             container: "svg-viewbox",
             join: !0,
             ecl: "L",
             padding: 0,
-          }).svg());
+          }).svg()));
       }),
         navigator.canShare
           ? s.addEventListener("click", () => {
@@ -713,14 +719,14 @@
               });
             })
           : s.addEventListener("click", () => {
-              tC(m), (cv.style.display = "flex"), dN(qrv), ki && dN(ki);
+              (tC(m), (cv.style.display = "flex"), dN(qrv), ki && dN(ki));
             }),
         sqr.addEventListener("click", () => {
-          tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki);
+          (tC(m), (qrv.style.display = "block"), dN(cv), ki && dN(ki));
         }),
         sk &&
           sk.addEventListener("click", () => {
-            tC(m), ki && (ki.style.display = "flex"), dN(cv), dN(qrv);
+            (tC(m), ki && (ki.style.display = "flex"), dN(cv), dN(qrv));
           }),
         c.addEventListener("click", () => tC(m)),
         curl.addEventListener("click", async () => {
@@ -728,19 +734,19 @@
           await navigator.clipboard
             .writeText(window.location.href)
             .then((t) => {
-              (e.innerText = "Скопировано"),
+              ((e.innerText = "Скопировано"),
                 setTimeout(() => {
                   e.innerText = "Скопировать URL";
-                }, 1e3);
+                }, 1e3));
             });
-        });
+        }));
     </script>
     <script>
       let pC = document.querySelectorAll(".pCtrl"),
         pP = document.querySelectorAll(".playPause"),
         srcs = document.querySelectorAll(".source");
-      srcs.forEach((e) => {
-        (e.style.pointerEvents = "none"), e.removeAttribute("controls");
+      (srcs.forEach((e) => {
+        ((e.style.pointerEvents = "none"), e.removeAttribute("controls"));
       }),
         pC.forEach((e, l) => {
           e.style.display = "flex";
@@ -749,19 +755,19 @@
             t = e.querySelector(".playPause"),
             a = t.querySelector(".play"),
             c = t.querySelector(".pause");
-          srcs[l].addEventListener("timeupdate", () => {
+          (srcs[l].addEventListener("timeupdate", () => {
             let e = srcs[l].currentTime,
               t = (100 / srcs[l].duration) * e;
-            (s.value = t),
+            ((s.value = t),
               100 == t &&
                 ((s.value = 0),
                 (a.style.display = "block"),
-                (c.style.display = "none"));
+                (c.style.display = "none")));
             let o = Math.floor(e / 60),
               y = Math.floor(e % 60);
-            o.toString().length < 2 && (o = "0" + o),
+            (o.toString().length < 2 && (o = "0" + o),
               y.toString().length < 2 && (y = "0" + y),
-              (r.value = o + ":" + y);
+              (r.value = o + ":" + y));
           }),
             s.addEventListener("change", () => {
               srcs[l].currentTime =
@@ -775,7 +781,7 @@
                   pP.forEach((e, l) => {
                     let r = e.querySelector(".play"),
                       s = e.querySelector(".pause");
-                    (r.style.display = "block"), (s.style.display = "none");
+                    ((r.style.display = "block"), (s.style.display = "none"));
                   }),
                   srcs[l].play(),
                   (a.style.display = "none"),
@@ -783,8 +789,8 @@
                 : (srcs[l].pause(),
                   (c.style.display = "none"),
                   (a.style.display = "block"));
-            });
-        });
+            }));
+        }));
     </script>
   </body>
 </html>
