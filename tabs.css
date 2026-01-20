@@ -15,7 +15,7 @@ body {
 .tabs-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  border: 2px solid #0066cc33;
+  border: 2px solid #cce0f5;
   border-radius: 10px;
   overflow: hidden;
   background: white;
@@ -35,7 +35,7 @@ body {
   text-align: center;
   border: none;
   background: white;
-  color: #0066cc;
+  color: #222;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .tab-header:not(.active):hover {
-  background: #f0f8ff;
+  background: #cce0f5;
 }
 
 .tab-header:first-child {
