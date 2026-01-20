@@ -186,8 +186,8 @@ main {
   text-align: center;
 }
 #profilePhoto {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 100%;
   box-sizing: content-box;
   pointer-events: none;
@@ -195,7 +195,7 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-top: -6rem;
+  margin-top: -7rem;
 }
 #info {
   display: flex;
@@ -438,6 +438,7 @@ footer {
   padding: 2rem 2rem 2rem;
   font-size: 0.9rem;
   text-align: center;
+  color: #bbb;
 }
 footer a,
 footer a:visited,
