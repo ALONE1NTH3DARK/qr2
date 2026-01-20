@@ -285,7 +285,7 @@ main {
   justify-content: center;
 }
 .actionBtn a {
-  border-radius: 10px;
+  border-radius: 100%;
   padding: 1rem;
   line-height: 0;
 }
