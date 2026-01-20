@@ -35,7 +35,7 @@ body {
   text-align: center;
   border: none;
   background: white;
-  color: #222;
+  color: #0066cc;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -109,19 +109,4 @@ body {
   font-size: 0.9rem;
   color: #444;
   line-height: 1.4;
-}
-
-/* Адаптивность */
-@media (max-width: 600px) {
-  .instagram-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 28px 20px;
-  }
-  .card-icon {
-    margin: 0 auto 16px;
-  }
-  .card-content {
-    text-align: center;
-  }
 }
