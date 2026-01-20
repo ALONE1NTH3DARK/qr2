@@ -186,8 +186,8 @@ main {
   text-align: center;
 }
 #profilePhoto {
-  width: 12rem;
-  height: 12rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 100%;
   box-sizing: content-box;
   pointer-events: none;
@@ -195,7 +195,7 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-top: -7rem;
+  margin-top: -6.5rem;
 }
 #info {
   display: flex;
