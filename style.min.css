@@ -278,7 +278,7 @@ main {
   width: 33.33%;
 }
 .actionBtn {
-  padding: 0.4rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
