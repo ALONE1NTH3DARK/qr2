@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Простые вкладки</title>
+    <title>Опт / Розница — вкладки</title>
 
     <style>
       * {
@@ -13,143 +13,151 @@
       }
 
       body {
-        font-family: system-ui, sans-serif;
-        background: #f0f2f5;
-        padding: 40px;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f5f5f5;
+        padding: 30px;
         min-height: 100vh;
       }
 
-      .tabs {
-        max-width: 700px;
+      .tabs-wrapper {
+        max-width: 580px;
         margin: 0 auto;
-      }
-
-      .tab-buttons {
-        display: flex;
-        border-bottom: 2px solid #ddd;
-        margin-bottom: 20px;
-      }
-
-      .tab-button {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #666;
-        position: relative;
-        transition: all 0.2s;
-      }
-
-      .tab-button:hover {
-        color: #333;
-      }
-
-      .tab-button.active {
-        color: #0066cc;
-        font-weight: 600;
-      }
-
-      .tab-button.active::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: #0066cc;
-        border-radius: 3px 3px 0 0;
-      }
-
-      .tab-content {
+        border: 2px solid #0066cc;
+        border-radius: 10px;
+        overflow: hidden;
         background: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        min-height: 200px;
       }
 
-      .tab-pane {
+      .tab-headers {
+        display: flex;
+        width: 100%;
+      }
+
+      .tab-header {
+        flex: 1;
+        padding: 14px 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+        background: white;
+        color: #0066cc;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      }
+
+      .tab-header.active {
+        background: #0066cc;
+        color: white;
+      }
+
+      .tab-header:not(.active):hover {
+        background: #f0f8ff;
+      }
+
+      .tab-header:first-child {
+        border-right: 1px solid #0066cc;
+      }
+
+      .tab-content-area {
+        padding: 35px 20px;
+        text-align: center;
+        min-height: 280px;
+      }
+
+      .tab-panel {
         display: none;
       }
 
-      .tab-pane.active {
+      .tab-panel.active {
         display: block;
+      }
+
+      .instagram-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .ig-logo {
+        width: 76px;
+        height: 76px;
+        background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+        border-radius: 18px;
+        color: white;
+        font-size: 42px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .username {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #111;
+      }
+
+      .description {
+        font-size: 1.05rem;
+        color: #444;
+        max-width: 420px;
+        line-height: 1.45;
       }
     </style>
   </head>
   <body>
-    <div class="tabs">
-      <!-- Кнопки вкладок -->
-      <div class="tab-buttons">
-        <button class="tab-button active" data-tab="tab1">Описание</button>
-        <button class="tab-button" data-tab="tab2">Характеристики</button>
+    <div class="tabs-wrapper">
+      <!-- Заголовки вкладок -->
+      <div class="tab-headers">
+        <button class="tab-header active" data-tab="opt">Оптовые</button>
+        <button class="tab-header" data-tab="roz">Розничные</button>
       </div>
 
       <!-- Контент вкладок -->
-      <div class="tab-content">
-        <div class="tab-pane active" id="tab1">
-          <h2>Первая вкладка</h2>
-          <p>Здесь находится основное описание товара/услуги/проекта.</p>
-          <p>
-            Можно писать длинный текст, вставлять списки, картинки и всё
-            остальное.
-          </p>
-          <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-            <li>Пункт 3</li>
-          </ul>
+      <div class="tab-content-area">
+        <div class="tab-panel active" id="opt">
+          <div class="instagram-section">
+            <div class="ig-logo">IG</div>
+            <div class="username">@optovka_krg</div>
+            <div class="description">
+              Instagram с оптовыми товарами<br />
+              Самые выгодные цены оптом в Караганде и области
+            </div>
+          </div>
         </div>
 
-        <div class="tab-pane" id="tab2">
-          <h2>Вторая вкладка</h2>
-          <table style="width: 100%; border-collapse: collapse">
-            <tr>
-              <th>Параметр</th>
-              <th>Значение</th>
-            </tr>
-            <tr>
-              <td>Размер</td>
-              <td>200 × 300 × 400 мм</td>
-            </tr>
-            <tr>
-              <td>Вес</td>
-              <td>2.3 кг</td>
-            </tr>
-            <tr>
-              <td>Мощность</td>
-              <td>150 Вт</td>
-            </tr>
-            <tr>
-              <td>Цвет</td>
-              <td>Чёрный / Белый</td>
-            </tr>
-          </table>
-
-          <p style="margin-top: 20px">
-            Дополнительная информация, которую удобно показывать во второй
-            вкладке.
-          </p>
+        <div class="tab-panel" id="roz">
+          <div class="instagram-section">
+            <div class="ig-logo">IG</div>
+            <div class="username">@rozничka_krg</div>
+            <div class="description">
+              Instagram с розничными товарами<br />
+              Быстрая доставка по городу и региону<br />
+              Цены в розницу — от 1 штуки
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const buttons = document.querySelectorAll(".tab-button");
-        const panes = document.querySelectorAll(".tab-pane");
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab-header");
+        const panels = document.querySelectorAll(".tab-panel");
 
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => {
-            // убираем active у всех кнопок и панелей
-            buttons.forEach((btn) => btn.classList.remove("active"));
-            panes.forEach((pane) => pane.classList.remove("active"));
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // убираем active у всех
+            tabs.forEach((t) => t.classList.remove("active"));
+            panels.forEach((p) => p.classList.remove("active"));
 
-            // добавляем active выбранной вкладке
-            button.classList.add("active");
-
-            const tabId = button.getAttribute("data-tab");
+            // активируем выбранную
+            this.classList.add("active");
+            const tabId = this.getAttribute("data-tab");
             document.getElementById(tabId).classList.add("active");
           });
         });
