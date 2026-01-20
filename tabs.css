@@ -74,7 +74,7 @@ body {
   gap: 20px;
   max-width: 520px;
   margin: 0 auto;
-  padding: 24px 28px;
+  padding: 20px 12px;
   background: #ffffff;
 }
 
@@ -99,10 +99,10 @@ body {
 }
 
 .card-title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   color: #222;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .card-description {
