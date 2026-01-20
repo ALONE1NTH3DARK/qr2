@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Радужный перелив текста</title>
+    <style>
+      body {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .rainbow-text {
+        font-size: 5rem;
+        font-weight: bold;
+        background: linear-gradient(
+          to right,
+          #ff0000,
+          #ff7f00,
+          #ffff00,
+          #00ff00,
+          #00ffff,
+          #0000ff,
+          #8b00ff,
+          #ff0000
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 200% 100%; /* для плавного цикла */
+        animation: rainbowFlow 8s linear infinite;
+      }
+
+      @keyframes rainbowFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: -200% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="rainbow-text">РАДУГА ПЕРЕЛИВАЕТСЯ!</h1>
+  </body>
+</html>
