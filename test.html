@@ -2,50 +2,158 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Радужный перелив текста</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Простые вкладки</title>
+
     <style>
-      body {
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      * {
         margin: 0;
-        font-family: Arial, sans-serif;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .rainbow-text {
-        font-size: 5rem;
-        font-weight: bold;
-        background: linear-gradient(
-          to right,
-          #ff0000,
-          #ff7f00,
-          #ffff00,
-          #00ff00,
-          #00ffff,
-          #0000ff,
-          #8b00ff,
-          #ff0000
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        background-size: 200% 100%; /* для плавного цикла */
-        animation: rainbowFlow 8s linear infinite;
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f0f2f5;
+        padding: 40px;
+        min-height: 100vh;
       }
 
-      @keyframes rainbowFlow {
-        0% {
-          background-position: 0% 50%;
-        }
-        100% {
-          background-position: -200% 50%;
-        }
+      .tabs {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .tab-buttons {
+        display: flex;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 20px;
+      }
+
+      .tab-button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #666;
+        position: relative;
+        transition: all 0.2s;
+      }
+
+      .tab-button:hover {
+        color: #333;
+      }
+
+      .tab-button.active {
+        color: #0066cc;
+        font-weight: 600;
+      }
+
+      .tab-button.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #0066cc;
+        border-radius: 3px 3px 0 0;
+      }
+
+      .tab-content {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        min-height: 200px;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
       }
     </style>
   </head>
   <body>
-    <h1 class="rainbow-text">РАДУГА ПЕРЕЛИВАЕТСЯ!</h1>
+    <div class="tabs">
+      <!-- Кнопки вкладок -->
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="tab1">Описание</button>
+        <button class="tab-button" data-tab="tab2">Характеристики</button>
+      </div>
+
+      <!-- Контент вкладок -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <h2>Первая вкладка</h2>
+          <p>Здесь находится основное описание товара/услуги/проекта.</p>
+          <p>
+            Можно писать длинный текст, вставлять списки, картинки и всё
+            остальное.
+          </p>
+          <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+          </ul>
+        </div>
+
+        <div class="tab-pane" id="tab2">
+          <h2>Вторая вкладка</h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+            <tr>
+              <td>Размер</td>
+              <td>200 × 300 × 400 мм</td>
+            </tr>
+            <tr>
+              <td>Вес</td>
+              <td>2.3 кг</td>
+            </tr>
+            <tr>
+              <td>Мощность</td>
+              <td>150 Вт</td>
+            </tr>
+            <tr>
+              <td>Цвет</td>
+              <td>Чёрный / Белый</td>
+            </tr>
+          </table>
+
+          <p style="margin-top: 20px">
+            Дополнительная информация, которую удобно показывать во второй
+            вкладке.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".tab-button");
+        const panes = document.querySelectorAll(".tab-pane");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // убираем active у всех кнопок и панелей
+            buttons.forEach((btn) => btn.classList.remove("active"));
+            panes.forEach((pane) => pane.classList.remove("active"));
+
+            // добавляем active выбранной вкладке
+            button.classList.add("active");
+
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
