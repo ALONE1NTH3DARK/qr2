@@ -211,6 +211,9 @@ main {
   font-size: 1.5rem;
   margin: 0;
 }
+.jobtitle {
+  color: #444;
+}
 .pronouns {
   display: block;
   font-size: 0.9rem;
