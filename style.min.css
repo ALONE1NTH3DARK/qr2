@@ -55,7 +55,11 @@ p {
   line-height: 1.5;
   margin: 0;
 }
-h2,
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
 h3 {
   margin: 0;
 }
@@ -249,8 +253,7 @@ main {
   margin: 1rem;
 }
 .tb {
-  font-size: 1.5rem !important;
-  margin: 1rem;
+  font-size: 20px !important;
 }
 #cta {
   display: flex;

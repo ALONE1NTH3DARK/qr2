@@ -25,6 +25,7 @@
       #body{ font-family: "EuclidCircularA",sans-serif; } input[type='range']::-moz-range-track { background: none; } input[type='range']::-moz-range-thumb { -moz-appearance: none; width: 1.5rem; height: 1.5rem; border-radius: 100%; border: none; background: #0066cc; z-index: 3; cursor: pointer; } input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 1.5rem; height: 1.5rem; border-radius: 100%; border: none; background: #0066cc; z-index: 3; cursor: pointer; } .closeColor{ filter:invert(1)  } .topAction { filter:invert(1) } .iconColor{ color:#000; filter:invert(1) } .cardColor{ false } .textColor{ color:#222 !important } .seekbarColor{  background:#0066cc !important }
     </style>
     <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="schedule.css" />
     <!---->
     <style>
       #body {
@@ -316,10 +317,9 @@
       <img id="profilePhoto" src="./photo.jpeg" alt="Photo" />
       <div id="info" class="textColor">
         <p class="name mb">Оптовка на Саркыте</p>
-        <!---->
+        <!-- prettier-ignore -->
         <p class="jobtitle">
-          Продажа оптом и в розницу аксессуаров для смартфонов, компьютерной
-          переферии и товаров для дома в Караганде
+          Продажа оптом и в розницу аксессуаров для смартфонов, компьютерной переферии и товаров для дома в Караганде
         </p>
         <p class="bizname"></p>
         <!-- <p class="bizaddr">Обучение фотографии в Караганде</p> -->
@@ -448,7 +448,7 @@
         </div>
       </div>
 
-      <h2 class="section textColor mt2">Каталог товаров</h2>
+      <h2 class="section textColor tb mt2">Каталог товаров</h2>
       <div class="tabs-wrapper mt">
         <!-- Заголовки вкладок -->
         <div class="tab-headers">
@@ -515,7 +515,7 @@
                 ></a>
               </div>
               <div class="card-content">
-                <div class="card-title">@opt_karaganda</div>
+                <div class="card-title">@optovka_v_karagande</div>
                 <div class="card-description">
                   Наш Instagram в котором вы можете следить за новинками
                 </div>
@@ -577,7 +577,7 @@
                 ></a>
               </div>
               <div class="card-content">
-                <div class="card-title">@optov</div>
+                <div class="card-title">@opt_v_dom</div>
                 <div class="card-description">
                   Наш Instagram в котором вы можете следить за новинками
                 </div>
@@ -690,7 +690,7 @@
       </div>
 
       <div class="featured">
-        <h2 class="section textColor tb">О фотошколе</h2>
+        <h2 class="section textColor tb">Мини-маркет</h2>
 
         <div>
           <div class="media" style="background-color: #fde4bc">
@@ -711,11 +711,6 @@
               <img src="images/photo1.jpg" alt="Фото 1" />
               <img src="images/photo2.jpg" alt="Фото 2" />
               <img src="images/photo3.jpg" alt="Фото 3" />
-              <img src="images/photo4.jpg" alt="Фото 4" />
-              <img src="images/photo5.jpg" alt="Фото 5" />
-              <img src="images/photo6.jpg" alt="Фото 6" />
-              <img src="images/photo7.jpg" alt="Фото 7" />
-              <img src="images/photo8.jpg" alt="Фото 8" />
               <!-- Добавляй сколько угодно фото -->
             </div>
 
@@ -767,10 +762,47 @@
       </div>
     </main>
 
+    <div class="schedule mt mb">
+      <div class="hd"><b>График работы</b></div>
+
+      <table>
+        <tr>
+          <td class="day">Понедельник</td>
+          <td class="weekend">Выходной</td>
+        </tr>
+        <tr>
+          <td class="day">Вторник</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+        <tr>
+          <td class="day">Среда</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+        <tr>
+          <td class="day">Четверг</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+        <tr>
+          <td class="day">Пятница</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+        <tr>
+          <td class="day">Суббота</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+        <tr>
+          <td class="day">Воскресенье</td>
+          <td class="time">10:00 – 17:00</td>
+        </tr>
+      </table>
+
+      <div class="footer">Без перерыва на обед</div>
+    </div>
+
     <prefooter class="">
+      <!-- prettier-ignore -->
       <p class="prefooter-text" style="background-color: #ededed">
-        <b>Фотошкола находится по адресу:</b><br />Караганда, Ержанова 10/2,
-        офис 209
+        <b>Мини-маркет находится по адресу:</b><br />Караганда, ул. Затаевича 75,<br />ТД Саркыт, бутик 31-34
       </p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.552718077075!2d73.08739709999999!3d49.7944757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42434731354bbccb%3A0xf0a964838d8f77bf!2sFotoshkola%20Valeriya%20Lashkevicha!5e0!3m2!1sen!2skz!4v1768143249803!5m2!1sen!2skz"

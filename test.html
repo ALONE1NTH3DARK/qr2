@@ -1,140 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Записи с иконками (центрирование)</title>
-    <style>
-      body {
-        font-family:
-          system-ui,
-          -apple-system,
-          sans-serif;
-        background: #f5f5f5;
-        padding: 20px;
-        margin: 0;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>График работы</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .schedule {
+      max-width: 380px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .header {
+      background: #6e48aa;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #eee;
+      font-size: 1.1em;
+    }
+    .day {
+      font-weight: bold;
+      width: 40%;
+      background: #fafafa;
+    }
+    .time {
+      text-align: right;
+      color: #2c3e50;
+    }
+    .weekend {
+      background: #ffebee;
+      color: #c62828;
+      font-weight: bold;
+    }
+    .footer {
+      padding: 14px;
+      text-align: center;
+      font-size: 0.95em;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
 
-      .entries {
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
+<div class="schedule">
+  <div class="header">График работы</div>
+  
+  <table>
+    <tr>
+      <td class="day">Понедельник</td>
+      <td class="weekend">Выходной</td>
+    </tr>
+    <tr>
+      <td class="day">Вторник</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+    <tr>
+      <td class="day">Среда</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+    <tr>
+      <td class="day">Четверг</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+    <tr>
+      <td class="day">Пятница</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+    <tr>
+      <td class="day">Суббота</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+    <tr>
+      <td class="day">Воскресенье</td>
+      <td class="time">10:00 – 17:00</td>
+    </tr>
+  </table>
+  
+  <div class="footer">Без перерыва на обед</div>
+</div>
 
-      .entry {
-        display: flex;
-        align-items: center; /* ← главное изменение: вертикальное центрирование */
-        background: white;
-        padding: 16px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        transition: all 0.2s;
-      }
-
-      .entry:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        transform: translateY(-1px);
-      }
-
-      .entry-icon {
-        font-size: 32px;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        margin-right: 16px;
-      }
-
-      .entry-content {
-        flex: 1;
-      }
-
-      .entry-title {
-        font-size: 17px;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin: 0 0 4px 0;
-      }
-
-      .entry-text {
-        font-size: 14px;
-        color: #666;
-        margin: 0;
-        line-height: 1.4;
-      }
-
-      /* Цвета иконок */
-      .icon-blue {
-        color: #007aff;
-      }
-      .icon-green {
-        color: #34c759;
-      }
-      .icon-red {
-        color: #ff3b30;
-      }
-      .icon-orange {
-        color: #ff9500;
-      }
-      .icon-purple {
-        color: #af52de;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="entries">
-      <div class="entry">
-        <div class="entry-icon icon-blue">💻</div>
-        <div class="entry-content">
-          <h3 class="entry-title">NVIDIA драйвер обновлён</h3>
-          <p class="entry-text">
-            Версия 570.124.04, explicit sync включён. Фризы в Niri должны
-            исчезнуть.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-icon icon-green">✅</div>
-        <div class="entry-content">
-          <h3 class="entry-title">udiskie запущен</h3>
-          <p class="entry-text">
-            Диски монтируются автоматически при подключении.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-icon icon-orange">🔊</div>
-        <div class="entry-content">
-          <h3 class="entry-title">Громкость 25%</h3>
-          <p class="entry-text">
-            Привязка: wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.25
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-icon icon-purple">💿</div>
-        <div class="entry-content">
-          <h3 class="entry-title">fstab на UUID</h3>
-          <p class="entry-text">
-            nvme0n1 и nvme1n1 могут меняться местами — теперь это не проблема.
-          </p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-icon icon-red">🚀</div>
-        <div class="entry-content">
-          <h3 class="entry-title">CachyOS + Niri</h3>
-          <p class="entry-text">Настраивается долго, но потом летает.</p>
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
 </html>
