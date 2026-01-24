@@ -436,7 +436,7 @@ video {
 prefooter {
   font-size: 1rem;
   text-align: center;
-  color: #bbb;
+  color: #ededed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,13 +447,13 @@ footer {
   padding: 2rem 2rem 2rem;
   font-size: 0.9rem;
   text-align: center;
-  color: #bbb;
+  color: #ededed;
 }
 footer a,
 footer a:visited,
 footer a:active,
 footer a:focus {
-  color: #bbb !important;
+  color: #ededed !important;
 }
 footer a:hover {
   color: #fac979 !important;
