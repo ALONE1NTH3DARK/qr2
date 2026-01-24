@@ -1,4 +1,5 @@
 .schedule {
+  max-width: 400px;
   margin: 0 auto;
   background: white;
   overflow: hidden;
@@ -21,6 +22,7 @@ td {
   background: #ffffff;
 }
 .time {
+  font-size: 1rem;
   text-align: right;
   color: #2c3e50;
 }
