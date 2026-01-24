@@ -1,5 +1,4 @@
 .schedule {
-  max-width: 1200px;
   min-height: 400px;
   margin: 0;
   background: white;
@@ -16,11 +15,10 @@ table {
 td {
   padding: 14px 18px;
   border-bottom: 1px solid #eee;
-  font-size: 1.1em;
 }
 .day {
   font-size: 1rem;
-  width: 40%;
+  width: 50%;
   background: #ffffff;
 }
 .time {
@@ -38,5 +36,5 @@ td {
   padding: 14px;
   text-align: center;
   font-size: 0.9em;
-  color: #8f2929;
+  color: #eee;
 }
